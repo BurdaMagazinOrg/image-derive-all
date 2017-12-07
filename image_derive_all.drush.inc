@@ -60,7 +60,8 @@ function image_derive_all_drush_action() {
   $files = image_derive_all_get_relevant_files(drush_get_option('dir'));
 
   $excludes = explode(",", drush_get_option('exclude'));
-  $includes = drush_get_arguments();
+  $includes = explode(",", func_get_args()[0]);
+
   $imageStyles = ImageStyle::loadMultiple();
 
   /* @var string $name Name of Style */
