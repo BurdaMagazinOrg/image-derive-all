@@ -41,7 +41,7 @@ function image_derive_all_drush_command() {
       'drush image-derive-all --exclude=thumbnail --dir=public' => 'Generates image derivatives for all image styles except "thumbnail" for every file within the public file system directory but not in subdirectories.',
       'drush image-derive-all thumbnail --dir=public --purge' => 'Generates image derivatives for the "thumbnail" style only and overwriting images if they exist, for every file within the public file system directory but not in subdirectories.',
     ],
-    'core' => ['8'],
+    'core' => ['8', '9'],
     'bootstrap' => DRUSH_BOOTSTRAP_DRUPAL_FULL,
     'callback' => 'image_derive_all_drush_action',
     'aliases' => ['ida'],
