@@ -102,8 +102,7 @@ function image_derive_all_get_relevant_files($directory) {
 
   $dir = rtrim($directory, '/');
   if ($dir == 'public') {
-    // Finds anything that does not contain "/", should be fine.
-    $file_pattern = "[^\/]*";
+    $file_pattern = ".*";
   }
   else {
     $file_pattern = $dir ? $dir . ".+" : ".+";
