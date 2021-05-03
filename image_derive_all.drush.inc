@@ -109,7 +109,7 @@ function image_derive_all_get_relevant_files($directory) {
     $file_pattern = $dir ? $dir . ".+" : ".+";
   }
 
-  $regex = "^public:\/\/(" . $file_pattern . ")\.(" . implode($extensions, '|') . ")$";
+  $regex = "^public:\/\/(" . $file_pattern . ")\.(" . implode('|', $extensions) . ")$";
 
   // Query the database for files that match this pattern.
   $query = Database::getConnection()
